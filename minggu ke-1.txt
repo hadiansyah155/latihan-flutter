@@ -1,0 +1,99 @@
+kawal corona aplikasi ini memberikan informasi 
+tentang virus corona aplikasi ini memberi informasi terbaru
+ 
+tujuan:untuk mengetahui seberapa pasien peningkatan coron tiap bulannya
+dan mengetahui keterangan jarak setiap grafik peningkatan dan penurunan
+jumlah covid-19 yang berada di indonesia
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+statistik corona virus di indonesia
+-statistik dari awal corona hingga sekarang
+-total : -positif
+         -relatif
+         -sembuh
+         -meninggal
+
+tabel 
+        - Data Kasus Di Indonesia 
+        - Data Kasus Di Provinsi
+        - Data Kasus Di Kota
+        - Data Kasus Di Kec
+        - Data Kasus Di Kelurahan
+        - Data Kasus Di Rw
+        - Data Kasus Di Rt
+         -statistik kasus        
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+status :200
+data :
+      {
+        id_prov
+        nama_kota
+        nama_kec
+        id_rw
+        sembuh
+        positif
+        relatif
+        Meninggal
+      }
+
+message :
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+provinsi 
+-id  ==> <Pk> int
+kode_provinsi ==> String
+nama  ==> String
+
+country 
+id ==> <pk> int
+kode_negara ==> String
+nama ==>String
+
+KT
+id ==> <pk> Int
+id ==> provinsi ==>string
+sembuh +tanggal 
+positif
+meninggal
+
+KG
+id ==> <pk> int
+id_country==>string
+sembuh positif meniggal
+tanggal
+
+hotline
+id ==> <pt> int
+logo
+no.kontak
+nama-pemprov
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

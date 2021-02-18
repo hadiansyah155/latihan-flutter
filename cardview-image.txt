@@ -1,0 +1,171 @@
+ini adalah layout gridview image & text
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  ScrollController _controller;
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.black,
+        appBar: AppBar(
+          leading: Icon(Icons.home),
+          title: Text('Hadiansyah'),
+          actions: <Widget>[
+            Icon(Icons.search),
+          ],
+          elevation: 0,
+          backgroundColor: Colors.blue[900],
+          centerTitle: true,
+        ),
+        body: Column(
+          children: <Widget>[
+            Flexible(
+              flex: 1,
+              child: Row(
+                children: <Widget>[
+                  Flexible(
+                    flex: 1,
+                    child: Container(
+                      height: 200,
+                      width: 170,
+                      margin: EdgeInsets.all(15),
+                      decoration: BoxDecoration(color: Colors.blueAccent),
+                    ),
+                  ),
+                  Flexible(
+                    flex: 1,
+                    child: Container(
+                      height: 200,
+                      width: 170,
+                      margin: EdgeInsets.all(15),
+                      decoration: BoxDecoration(color: Colors.yellowAccent),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Flexible(
+              flex: 2,
+              child: Container(
+                child: ListView(
+                  controller: _controller,
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    ListItem(
+                      color: Colors.red,
+                      width: 100,
+                    ),
+                    ListItem(
+                      color: Colors.lightBlue,
+                      width: 100,
+                    ),
+                    ListItem(
+                      color: Colors.yellowAccent,
+                      width: 100,
+                    ),
+                    ListItem(
+                      color: Colors.blueGrey,
+                      width: 100,
+                    ),
+                    ListItem(
+                      color: Colors.pinkAccent,
+                      width: 100,
+                    ),
+                    ListItem(
+                      color: Colors.green,
+                      width: 100,
+                    ),
+                    ListItem(
+                      color: Colors.orange,
+                      width: 100,
+                    ),
+                    ListItem(
+                      color: Colors.teal,
+                      width: 100,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Flexible(
+              flex: 1,
+              child: Row(
+                children: <Widget>[
+                  Flexible(
+                    flex: 1,
+                    child: Container(
+                      width: 150,
+                      height: 100,
+                      margin: EdgeInsets.all(10),
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                        image: AssetImage('assets/nangis.png'),
+                      )),
+                    ),
+                  ),
+                  Flexible(
+                    flex: 1,
+                    child: Container(
+                      width: 150,
+                      height: 100,
+                      margin: EdgeInsets.all(10),
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                        image: AssetImage('assets/kecewa.png'),
+                      )),
+                    ),
+                  ),
+                  Flexible(
+                    flex: 1,
+                    child: Container(
+                      width: 150,
+                      height: 100,
+                      margin: EdgeInsets.all(10),
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                        image: AssetImage('assets/senang.png'),
+                      )),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class ListItem extends StatelessWidget {
+  const ListItem({
+    Key key,
+    @required this.color,
+    @required this.width,
+  }) : super(key: key);
+
+  final Color color;
+  final double width;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(10),
+      child: Container(
+        height: 200,
+        width: width,
+        color: color,
+      ),
+    );
+  }
+}

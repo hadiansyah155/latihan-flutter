@@ -1,0 +1,414 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    title: 'Latihan Navigation',
+    home: HalamanPertama(),
+  ));
+}
+
+//class halaman pertama
+class HalamanPertama extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black,
+      appBar: AppBar(
+        leading: Icon(Icons.home),
+        title: Text('Hadiansyah'),
+        actions: <Widget>[
+          Icon(Icons.search),
+        ],
+        elevation: 0,
+        backgroundColor: Colors.blue[900],
+        centerTitle: true,
+      ),
+      body: Container(
+          padding: EdgeInsets.all(10),
+          margin: EdgeInsets.all(10),
+          decoration: BoxDecoration(color: Colors.yellow),
+          child: ListView(
+            children: <Widget>[
+              RaisedButton(
+                child: Text('Hero Mobile Legends'),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HalamanKesatu()),
+                  );
+                },
+              ),
+              RaisedButton(
+                child: Text('Hero Favorit'),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HalamanKedua()),
+                  );
+                },
+              )
+            ],
+          )),
+    );
+  }
+}
+
+//class halaman kedua
+class HalamanKesatu extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Hero Mobile Legends"),
+      ),
+      body: Center(
+          child: GridView.extent(
+        primary: false,
+        padding: const EdgeInsets.all(1),
+        crossAxisSpacing: 1,
+        mainAxisSpacing: 1,
+        maxCrossAxisExtent: 200.0,
+        children: <Widget>[
+          Container(
+            width: 100,
+            height: 100,
+            margin: EdgeInsets.all(10),
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                image: DecorationImage(
+              image: AssetImage('assets/ml2.jpeg'),
+            )),
+          ),
+          Container(
+            width: 100,
+            height: 100,
+            margin: EdgeInsets.all(10),
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                image: DecorationImage(
+              image: AssetImage('assets/ml3.jpeg'),
+            )),
+          ),
+          Container(
+            width: 100,
+            height: 100,
+            margin: EdgeInsets.all(10),
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                image: DecorationImage(
+              image: AssetImage('assets/ml5.jpeg'),
+            )),
+          ),
+          Container(
+            width: 100,
+            height: 100,
+            margin: EdgeInsets.all(10),
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                image: DecorationImage(
+              image: AssetImage('assets/ml4.jpeg'),
+            )),
+          ),
+          Container(
+            width: 100,
+            height: 100,
+            margin: EdgeInsets.all(10),
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                image: DecorationImage(
+              image: AssetImage('assets/ml3.jpeg'),
+            )),
+          ),
+          Container(
+            width: 100,
+            height: 100,
+            margin: EdgeInsets.all(10),
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                image: DecorationImage(
+              image: AssetImage('assets/ml2.jpeg'),
+            )),
+          ),
+          Container(
+            width: 100,
+            height: 100,
+            margin: EdgeInsets.all(10),
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                image: DecorationImage(
+              image: AssetImage('assets/ml1.jpeg'),
+            )),
+          ),
+          Container(
+            width: 100,
+            height: 100,
+            margin: EdgeInsets.all(10),
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                image: DecorationImage(
+              image: AssetImage('assets/ml5.jpeg'),
+            )),
+          ),
+          Container(
+            width: 100,
+            height: 100,
+            margin: EdgeInsets.all(10),
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                image: DecorationImage(
+              image: AssetImage('assets/ml4.jpeg'),
+            )),
+          ),
+          Container(
+            width: 100,
+            height: 100,
+            margin: EdgeInsets.all(10),
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                image: DecorationImage(
+              image: AssetImage('assets/ml3.jpeg'),
+            )),
+          ),
+          Container(
+            width: 100,
+            height: 100,
+            margin: EdgeInsets.all(10),
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                image: DecorationImage(
+              image: AssetImage('assets/ml1.jpeg'),
+            )),
+          ),
+          Container(
+            width: 100,
+            height: 100,
+            margin: EdgeInsets.all(10),
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                image: DecorationImage(
+              image: AssetImage('assets/ml2.jpeg'),
+            )),
+          )
+        ],
+      )),
+    );
+  }
+}
+
+//class halaman ketiga
+class HalamanKedua extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Hero Favorit'),
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+            child: Column(
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  height: 230,
+                  width: 170,
+                  padding: EdgeInsets.all(10),
+                  margin: EdgeInsets.all(10),
+                  decoration: BoxDecoration(color: Colors.blue),
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        width: 400,
+                        height: 150,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                          image: AssetImage('assets/ml1.jpeg'),
+                        )),
+                      ),
+                      Container(
+                        child: Column(
+                          children: <Widget>[
+                            Text(
+                              'ling',
+                              style: TextStyle(
+                                fontSize: 25,
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 230,
+                  width: 170,
+                  padding: EdgeInsets.all(10),
+                  margin: EdgeInsets.all(10),
+                  decoration: BoxDecoration(color: Colors.orange),
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        width: 400,
+                        height: 150,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                          image: AssetImage('assets/ml2.jpeg'),
+                        )),
+                      ),
+                      Container(
+                        child: Column(
+                          children: <Widget>[
+                            Text(
+                              'hayabusa',
+                              style: TextStyle(
+                                fontSize: 25,
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Container(
+                  height: 230,
+                  width: 170,
+                  padding: EdgeInsets.all(10),
+                  margin: EdgeInsets.all(10),
+                  decoration: BoxDecoration(color: Colors.purple),
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        width: 400,
+                        height: 150,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                          image: AssetImage('assets/ml3.jpeg'),
+                        )),
+                      ),
+                      Container(
+                        child: Column(
+                          children: <Widget>[
+                            Text(
+                              'Claude',
+                              style: TextStyle(
+                                fontSize: 25,
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 230,
+                  width: 170,
+                  padding: EdgeInsets.all(10),
+                  margin: EdgeInsets.all(10),
+                  decoration: BoxDecoration(color: Colors.red),
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        width: 400,
+                        height: 150,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                          image: AssetImage('assets/ml5.jpeg'),
+                        )),
+                      ),
+                      Container(
+                        child: Column(
+                          children: <Widget>[
+                            Text(
+                              'Valir',
+                              style: TextStyle(
+                                fontSize: 25,
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
+            Row(
+              children: [
+                Container(
+                  height: 230,
+                  width: 170,
+                  padding: EdgeInsets.all(10),
+                  margin: EdgeInsets.all(10),
+                  decoration: BoxDecoration(color: Colors.grey),
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        width: 400,
+                        height: 150,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                          image: AssetImage('assets/ml7.jpeg'),
+                        )),
+                      ),
+                      Container(
+                        child: Column(
+                          children: <Widget>[
+                            Text(
+                              'X-borx',
+                              style: TextStyle(
+                                fontSize: 25,
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 230,
+                  width: 170,
+                  padding: EdgeInsets.all(10),
+                  margin: EdgeInsets.all(10),
+                  decoration: BoxDecoration(color: Colors.yellow),
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        width: 400,
+                        height: 150,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                          image: AssetImage('assets/ml8.jpeg'),
+                        )),
+                      ),
+                      Container(
+                        child: Column(
+                          children: <Widget>[
+                            Text(
+                              'Dhyroth',
+                              style: TextStyle(
+                                fontSize: 25,
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ],
+        )),
+      ),
+    );
+  }
+}
